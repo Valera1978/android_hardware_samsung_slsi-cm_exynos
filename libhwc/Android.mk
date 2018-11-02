@@ -95,6 +95,12 @@ ifneq ($(filter exynos7420 exynos7580 exynos7870 exynos7880 exynos8890, $(TARGET
 endif
 
 LOCAL_CFLAGS += -DLOG_TAG=\"hwcomposer\"
+LOCAL_CFLAGS += -Wno-gnu-designator
+LOCAL_CFLAGS += -Wno-unused-parameter
+LOCAL_CFLAGS += -Wno-unused-variable
+LOCAL_CFLAGS += -Wno-format-extra-args
+LOCAL_CFLAGS += -Wno-unused-function
+LOCAL_CFLAGS += -Wno-format
 
 LOCAL_C_INCLUDES += \
 	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
@@ -111,9 +117,6 @@ LOCAL_C_INCLUDES += \
 	$(TOP)/hardware/samsung_slsi-cm/$(TARGET_SOC)/libhwcutilsmodule \
 	$(TOP)/hardware/samsung_slsi-cm/exynos/libmpp \
 	$(TOP)/system/core/libsync/include
-
-LOCAL_ADDITIONAL_DEPENDENCIES := \
-	INSTALLED_KERNEL_HEADERS
 
 LOCAL_SRC_FILES := ExynosHWC.cpp
 

@@ -41,9 +41,6 @@ LOCAL_C_INCLUDES := \
 	$(TOP)/hardware/samsung_slsi-cm/$(TARGET_SOC)/libhwcutilsmodule \
 	$(TOP)/hardware/samsung_slsi-cm/exynos/libmpp
 
-LOCAL_ADDITIONAL_DEPENDENCIES := \
-	INSTALLED_KERNEL_HEADERS
-
 LOCAL_SRC_FILES := \
 	ExynosVirtualDisplay.cpp
 
