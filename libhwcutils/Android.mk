@@ -80,6 +80,8 @@ endif
 LOCAL_CFLAGS += -Wno-unused-parameter
 LOCAL_CFLAGS += -Wno-unused-variable
 LOCAL_CFLAGS += -Wno-unused-function
+LOCAL_CFLAGS += -Wno-mismatched-tags
+LOCAL_CFLAGS += -Wno-format
 
 LOCAL_SRC_FILES += \
 	ExynosHWCUtils.cpp \

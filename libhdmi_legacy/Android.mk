@@ -59,6 +59,10 @@ LOCAL_SRC_FILES += \
 LOCAL_CFLAGS += -DUSE_DV_TIMINGS
 endif
 
+LOCAL_CFLAGS += -Wno-unused-parameter
+LOCAL_CFLAGS += -Wno-unused-variable
+LOCAL_CFLAGS += -Wno-macro-redefined
+
 LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE := libhdmi
 include $(BUILD_SHARED_LIBRARY)

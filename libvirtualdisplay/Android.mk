@@ -44,6 +44,11 @@ LOCAL_C_INCLUDES := \
 LOCAL_SRC_FILES := \
 	ExynosVirtualDisplay.cpp
 
+LOCAL_CFLAGS += -Wno-unused-parameter
+LOCAL_CFLAGS += -Wno-format
+LOCAL_CFLAGS += -Wno-sign-compare
+LOCAL_CFLAGS += -Wno-mismatched-tags
+
 LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE := libvirtualdisplay
 include $(BUILD_SHARED_LIBRARY)
