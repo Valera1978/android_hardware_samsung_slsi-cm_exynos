@@ -614,8 +614,11 @@ int exynos5_setPowerMode(struct hwc_composer_device_1 *dev, int disp, int mode)
         int err = ioctl(pdev->primaryDisplay->mDisplayFd, FBIOBLANK, fb_blank);
         if (err < 0) {
             if (errno == EBUSY)
+            {
                 ALOGI("FBIOBLANK ioctl failed (display already in blank mode: %d)",
                         fb_blank);
+                return 0;
+             }
             else
                 ALOGE("FBIOBLANK ioctl failed for mode: %d", fb_blank,
                         strerror(errno));
