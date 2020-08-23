@@ -18,7 +18,6 @@ LOCAL_PATH:= $(call my-dir)
 include $(CLEAR_VARS)
 
 ifeq ($(BOARD_USES_SKIA_FIMGAPI),true)
-LOCAL_MODULE_TAGS := optional
 
 LOCAL_SRC_FILES:= \
 	FimgApi.cpp   \

@@ -26,7 +26,6 @@ LOCAL_C_INCLUDES += \
 	$(TOP)/hardware/samsung_slsi-cm/exynos5/include
 
 LOCAL_SRC_FILES := MppFactory.cpp
-LOCAL_MODULE_TAGS := eng
 LOCAL_MODULE := libmpp
 
 ifeq ($(TARGET_BOARD_PLATFORM),exynos5)
